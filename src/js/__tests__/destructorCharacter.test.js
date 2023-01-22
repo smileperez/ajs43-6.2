@@ -24,10 +24,13 @@ test('Должны получиться карточки с доступными
     ],
   };
 
-
   const expected = [
-    { id: 8, name: 'Двойной выстрел', icon: 'http://...', description: 'Двойной выстрел наносит двойной урон' },
-    { id: 9, name: 'Нокаутирующий удар', icon: 'http://...', description: 'Описание недоступно' }
+    {
+      id: 8, name: 'Двойной выстрел', icon: 'http://...', description: 'Двойной выстрел наносит двойной урон',
+    },
+    {
+      id: 9, name: 'Нокаутирующий удар', icon: 'http://...', description: 'Описание недоступно',
+    },
   ];
 
   const received = destructorCharacter(character);

@@ -4,8 +4,14 @@ export default function destructorCharacter(obj) {
   const { special } = obj;
 
   for (const prop in special) {
-    const {id, name, icon, description = 'Описание недоступно' } = special[prop];
-    result.push( {id, name, icon, description} );
+    if (Object.prototype.hasOwnProperty.call(special, prop)) {
+      const {
+        id, name, icon, description = 'Описание недоступно',
+      } = special[prop];
+      result.push({
+        id, name, icon, description,
+      });
+    }
   }
 
   return result;
